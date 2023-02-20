@@ -1,0 +1,69 @@
+﻿@model SampleWebApplication1.Models.Practice
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Practice</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="mezoszerkesztes" class="control-label"></label>
+                <input asp-for="mezoszerkesztes" class="form-control" />
+                <span asp-validation-for="mezoszerkesztes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateDatabaseInProgramcs" class="control-label"></label>
+                <input asp-for="CreateDatabaseInProgramcs" class="form-control" />
+                <span asp-validation-for="CreateDatabaseInProgramcs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DbContextSzerkesztes" class="control-label"></label>
+                <input asp-for="DbContextSzerkesztes" class="form-control" />
+                <span asp-validation-for="DbContextSzerkesztes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ControllerGeneralas" class="control-label"></label>
+                <input asp-for="ControllerGeneralas" class="form-control" />
+                <span asp-validation-for="ControllerGeneralas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LayoutGombMegjelenites" class="control-label"></label>
+                <input asp-for="LayoutGombMegjelenites" class="form-control" />
+                <span asp-validation-for="LayoutGombMegjelenites" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppDbContextSzerkesztes" class="control-label"></label>
+                <input asp-for="AppDbContextSzerkesztes" class="form-control" />
+                <span asp-validation-for="AppDbContextSzerkesztes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NemAkaromHogyLatszodjon" class="control-label"></label>
+                <input asp-for="NemAkaromHogyLatszodjon" class="form-control" />
+                <span asp-validation-for="NemAkaromHogyLatszodjon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NemAkaromHogyLatszodjonBindesResz" class="control-label"></label>
+                <input asp-for="NemAkaromHogyLatszodjonBindesResz" class="form-control" />
+                <span asp-validation-for="NemAkaromHogyLatszodjonBindesResz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

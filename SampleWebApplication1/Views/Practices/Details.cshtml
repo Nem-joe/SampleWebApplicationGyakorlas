@@ -1,0 +1,66 @@
+﻿@model SampleWebApplication1.Models.Practice
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Practice</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.mezoszerkesztes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mezoszerkesztes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreateDatabaseInProgramcs)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreateDatabaseInProgramcs)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DbContextSzerkesztes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DbContextSzerkesztes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ControllerGeneralas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ControllerGeneralas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LayoutGombMegjelenites)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LayoutGombMegjelenites)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AppDbContextSzerkesztes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AppDbContextSzerkesztes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NemAkaromHogyLatszodjon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NemAkaromHogyLatszodjon)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NemAkaromHogyLatszodjonBindesResz)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NemAkaromHogyLatszodjonBindesResz)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
